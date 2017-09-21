@@ -1,1 +1,1 @@
-alert("Segunda forma de realizar mensajes con JavaScript")
+console.log("Mensaje de salida hecho para que salga en consola");
