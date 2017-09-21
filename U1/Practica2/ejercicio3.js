@@ -1,1 +1,1 @@
-alert("Tercera forma de realizar mensajes con JavaScript")
+alert("Segunda forma de realizar mensajes con JavaScript")
