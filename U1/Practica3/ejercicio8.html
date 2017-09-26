@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 8</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function preciofinal (precio, rebaja){
+        var precio = prompt("Introduce precio");
+        var porcentaje = prompt("Introduce porcentaje");
+          if(precio <0 || porcentaje <0){
+              alert("Escriba un número positivo");
+            }
+          else if (precio ==0 || porcentaje <0){
+            alert("Ponga un número mayor que 0.");
+            }
+            var preciofinal = (precio*rebaja)-rebaja;
+      }
+
+      preciofinal(precio,rebaja);
+
+    </script>
+  </body>
+</html>
