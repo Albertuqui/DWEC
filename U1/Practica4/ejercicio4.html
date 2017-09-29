@@ -7,12 +7,16 @@
   <body>
     <script type="text/javascript">
 
+    var cadena1= prompt("Introduce cadena1");
+    var cadena2 = prompt("Introduce cadena2");
 
       function maxcadena (cadena1,cadena2){
+        this.cadena1=cadena1;
+        this.cadena2=cadena2;
 
         if(typeof cadena1 !== "string" || typeof cadena2 !== "string"){
           console.log("Tienes que escribir caracteres");
-        }
+          }
 
             else  if(cadena1.length>cadena2.length){
                console.log("La cadena " + cadena1 + " tiene más caracteres");
@@ -25,7 +29,7 @@
              }
      }
 
-      maxcadena("hola",5);
+      maxcadena(cadena1,cadena2);
 
     </script>
 
