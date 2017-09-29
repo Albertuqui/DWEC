@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 4. Práctica 4</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+
+      function maxcadena (cadena1,cadena2){
+
+        if(typeof cadena1 !== "string" || typeof cadena2 !== "string"){
+          console.log("Tienes que escribir caracteres");
+        }
+
+            else  if(cadena1.length>cadena2.length){
+               console.log("La cadena " + cadena1 + " tiene más caracteres");
+             }
+               else if(cadena2.length>cadena1.length){
+                 console.log("La cadena " + cadena2 + " tiene más caracteres");
+               }
+              else {
+               console.log("Las dos palabras son iguales");
+             }
+     }
+
+      maxcadena("hola",5);
+
+    </script>
+
+  </body>
+</html>
