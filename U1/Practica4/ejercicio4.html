@@ -7,27 +7,28 @@
   <body>
     <script type="text/javascript">
 
-    var cadena1= prompt("Introduce cadena1");
-    var cadena2 = prompt("Introduce cadena2");
+var cadena1="hola";
+var cadena2=5;
 
-      function maxcadena (cadena1,cadena2){
-        this.cadena1=cadena1;
-        this.cadena2=cadena2;
 
-        if(typeof cadena1 !== "string" || typeof cadena2 !== "string"){
-          console.log("Tienes que escribir caracteres");
+  function maxcadena (c1,c2){
+
+        if(typeof(c1) !== "string" || typeof(c2) !== "string"){
+            console.log("Tienes que escribir caracteres");
           }
+          else {
 
-            else  if(cadena1.length>cadena2.length){
+        if(c1.length>c2.length){
                console.log("La cadena " + cadena1 + " tiene más caracteres");
              }
-               else if(cadena2.length>cadena1.length){
+        else if(c2.length>c1.length){
                  console.log("La cadena " + cadena2 + " tiene más caracteres");
                }
-              else {
-               console.log("Las dos palabras son iguales");
+        else {
+               console.log("Las dos palabras tienen los mismos carácteres");
              }
      }
+
 
       maxcadena(cadena1,cadena2);
 
