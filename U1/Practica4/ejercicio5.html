@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 5. Práctica 4</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    function calculadora(){
+       var calcular = prompt("Escoge opción: \n1. Suma  \n2. Resta  \n3. Multiplicar \n4. Dividir");
+       while (calcular <=0 || calcular >=5 || isNaN(calcular)){
+        var calcular = prompt ("Has introducido un valor incorrecto. Vuelve a escoger opción: \n1. Suma  \n2. Resta  \n3. Multiplicar \n4. Dividir");
+        }
+
+      calcular = parseInt(calcular);
+
+      var numero1 = prompt("Introduce primer número");
+       while(isNaN(numero1)){
+        var numero1 = prompt("Debes introducir un número");
+      }
+      numero1=parseInt(numero1);
+
+      var numero2 = prompt("Introduce segundo número");
+       while(isNaN(numero2)){
+      var numero2 = prompt("Debes introducir un número");
+      }
+        numero2=parseInt(numero2);
+
+         switch (calcular) {
+           case 1:
+           alert("La suma de " + numero1 + " + " numero2 + "es: " (numero1+numero2));
+             break;
+           default:
+         }
+
+       }
+
+
+
+    calculadora();
+
+    </script>
+
+  </body>
+</html>
