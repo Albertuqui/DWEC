@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Práctica 4. Ejercicio 6</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var ar1  = [1,2,3,"hola",true,false,"soy",7,"alberto",true];
+    var ar2 = [];
+    var j = 0;
+
+    for(var i =0; i< ar1.length;i++){
+      document.write("Indice " + [i] + " = " + ar1[i] + " " + "(" +  typeof(ar1[i]) + ")" + "<br>");
+      ar1[i] = Number(ar1[i]);
+      if(isNaN(ar1[i]) == false){
+        ar2[j]=ar1[i];
+        j++;
+      }
+    }
+
+    document.write("Array 2" + "<br>");
+
+    for(j=0;j<ar2.length;j++){
+      document.write("Indice " + [j] + " = " + ar2[j] + " " + "(" +  typeof(ar2[j]) + ")" + "<br>");
+    }
+
+
+    </script>
+  </body>
+</html>
