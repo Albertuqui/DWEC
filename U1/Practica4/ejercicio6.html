@@ -10,6 +10,8 @@
     var ar2 = [];
     var j = 0;
 
+        document.write("Array 1" + "<br>");
+
     for(var i =0; i< ar1.length;i++){
       document.write("Indice " + [i] + " = " + ar1[i] + " " + "(" +  typeof(ar1[i]) + ")" + "<br>");
       ar1[i] = Number(ar1[i]);
@@ -19,12 +21,19 @@
       }
     }
 
+    document.write("El array1 tiene " +  ar1.length + " elementos" + "<br>");
+
+    document.write("<br>");
+
+
     document.write("Array 2" + "<br>");
+
 
     for(j=0;j<ar2.length;j++){
       document.write("Indice " + [j] + " = " + ar2[j] + " " + "(" +  typeof(ar2[j]) + ")" + "<br>");
     }
 
+    document.write("El array2 tiene " + ar2.length + " elementos");
 
     </script>
   </body>
