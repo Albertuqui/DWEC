@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Práctica 5</title>
+    <script type="text/javascript">
+
+      function generarSurtido(){
+        var arraysurtido = ["Revistas","Periódico","Chucherias","Papas","Bebidas","Sellos", "palomitas", "Tabaco"];
+      return arraysurtido;
+      }
+
+      function consultaPrecios(articulo){
+        var arrayprecios = [0.50, 1, 0.05, 0.25, 1.50, 0.20,1.20,2];
+        return arrayprecios[articulo];
+      }
+
+      function mostrarSurtidoPrecio(arraysurtido){
+          document.write("<table align='center'><tr>" );
+        for(var i=0; i<arraysurtido.length;i++){
+              if(consultaPrecios(i) > 0){
+                document.write("<td align='center' width='100px'><img width='100px' src='" + arraysurtido[i] + ".png' alt='" + arraysurtido[i] + "'></td>" );
+              }
+        }
+        document.write("</tr><tr>");
+        for(var i=0; i<arraysurtido.length;i++){
+              if(consultaPrecios(i) > 0){
+                document.write("<td align='center' width='100px'>" + consultaPrecios(i) + " €</td>" );
+              }
+        }
+
+        document.write("</tr></table>");
+      }
+
+    </script>
+  </head>
+  <body>
+    <h1 align="center">¿Quieres conocer nuestro surtido?</h1>
+    <h2 align="center">Pulsa sobre la imagen</h2>
+    <img src="imagen.jpg" onclick="mostrarSurtidoPrecio(generarSurtido())">
+
+
+
+
+  </body>
+</html>
