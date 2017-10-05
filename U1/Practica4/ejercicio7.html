@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Práctica 4. Ejercicio 7</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var diasSemana = new Array("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado","Domingo");
+
+
+    function mostrarDias(){
+    for (var i in diasSemana) {
+  document.write(diasSemana[i] + "<br />");
+      }
+    }
+
+    function DevolverDia() {
+      var numero = prompt("Escribe número de día");
+      var minumero = numero || 4;
+      numero = parseInt(numero);
+
+      while(minumero<=0 || minumero>7  || isNaN(minumero) || !isFinite(minumero))  {
+              minumero= prompt("Debes escribir números que no sean infinitos.");
+            }
+
+     alert("El día es " + diasSemana[minumero-1]);
+    }
+
+
+   DevolverDia();
+
+    </script>
+  </body>
+</html>

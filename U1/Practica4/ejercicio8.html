@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Practica 4. Ejercicio 8</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    function concatena(primera, segunda){
+      var string;
+      if(typeof primera =="string" && typeof segunda =="string"){
+        string= primera + " " + segunda;
+        return string;
+      }
+    }
+
+    function saludador (persona, concatena){
+      var salida = concatena("Buenos días",persona);
+      alert(salida);
+    }
+
+    saludador("Alberto", concatena);
+
+
+    </script>
+  </body>
+</html>
