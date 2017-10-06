@@ -16,6 +16,7 @@
       }
 
       function mostrarSurtido(arraysurtido){
+        document.write("<h1><p align='center'><a onclick='mostrarPrecio(generarSurtido())'>Pincha aquí</a></h1></p>");
           document.write("<table align='center'><tr>" );
         for(var i=0; i<arraysurtido.length;i++){
               if(consultaPrecios(i) > 0){
@@ -23,7 +24,7 @@
               }
 
         }
-            document.write("<h1><p align='center'><a onclick='mostrarPrecio(generarSurtido())'>Pincha aquí</a></h1></p>");
+          document.write("</tr></table>")
 
       }
 
