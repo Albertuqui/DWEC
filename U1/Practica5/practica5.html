@@ -6,7 +6,7 @@
     <script type="text/javascript">
 
       function generarSurtido(){
-        var arraysurtido = ["Revistas","Periódico","Chucherias","Papas","Bebidas","Sellos", "palomitas", "Tabaco"];
+        var arraysurtido = ["Revistas","Periódico","Chucherias","Papas","Bebidas","Chicles", "Palomitas", "Tabaco"];
       return arraysurtido;
       }
 
@@ -19,25 +19,36 @@
           document.write("<table align='center'><tr>" );
         for(var i=0; i<arraysurtido.length;i++){
               if(consultaPrecios(i) > 0){
-                document.write("<td align='center' width='100px'><img width='100px' src='" + arraysurtido[i] + ".png' alt='" + arraysurtido[i] + "'></td>" );
+                document.write("<td align='center' width='100px'><img width='100px'  ' src='" + arraysurtido[i] + ".png' alt='" + arraysurtido[i] + "'></td>" );
               }
+
         }
-        document.write("</tr><tr>");
+            document.write("<h1><p align='center'><a onclick='mostrarPrecio(generarSurtido())'>Pincha aquí</a></h1></p>");
+
+      }
+
+
+
+      function mostrarPrecio(arraysurtido){
+          document.write("<table align='center'><tr>" );
         for(var i=0; i<arraysurtido.length;i++){
               if(consultaPrecios(i) > 0){
                 document.write("<td align='center' width='100px'>" + consultaPrecios(i) + " €</td>" );
               }
         }
-
-        document.write("</tr></table>");
+              document.write("</tr></table>");
       }
+
+
+
+
 
     </script>
   </head>
   <body>
     <h1 align="center">¿Quieres conocer nuestro surtido?</h1>
     <h2 align="center">Pulsa sobre la imagen</h2>
-    <img src="imagen.jpg" onclick="mostrarSurtidoPrecio(generarSurtido())">
+    <center><img src="imagen.jpg" onclick="mostrarSurtidoPrecio(generarSurtido())"></center>
 
 
 
