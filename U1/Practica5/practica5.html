@@ -15,7 +15,7 @@
         return arrayprecios[articulo];
       }
 
-      function mostrarSurtidoPrecio(arraysurtido){
+      function mostrarSurtido(arraysurtido){
           document.write("<table align='center'><tr>" );
         for(var i=0; i<arraysurtido.length;i++){
               if(consultaPrecios(i) > 0){
@@ -48,7 +48,7 @@
   <body>
     <h1 align="center">¿Quieres conocer nuestro surtido?</h1>
     <h2 align="center">Pulsa sobre la imagen</h2>
-    <center><img src="imagen.jpg" onclick="mostrarSurtidoPrecio(generarSurtido())"></center>
+    <center><img src="imagen.jpg" onclick="mostrarSurtido(generarSurtido())"></center>
 
 
 
