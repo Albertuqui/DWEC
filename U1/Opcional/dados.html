@@ -10,8 +10,7 @@
     function tirardado() {
       var numero = Math.floor(Math.random() * 6) +1;
             document.write("<center> Le ha tocado el número " + numero + "</center>");
-      document.write("<center><img width='200px' src='" + numero + ".png' ></center>");
-      document.write("<center><img width='50px' src='flecha.png' onclick='window.location.reload()'></center>");
+      document.write("<center><img width='200px' onclick='window.location.reload()' src='" + numero + ".png' ></center>");
     }
 
   document.write("<h1 align='center'> Haz click al dado <center><img onclick='tirardado()' src='dado.gif'></center></h1>");
