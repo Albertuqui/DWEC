@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 5</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      function Persona (nombre,apellidos){
+        this.nombre= nombre || "Anónimo";
+        this.apellidos= apellidos;
+        this.saludar = function (){
+        console.log("Hola me llamo " + this.nombre + " " + this.apellidos);
+        }
+      }
+
+      var persona1 = new Persona("", "Hernández");
+      var persona2 = new Persona("Alberto", "Baggetto");
+
+          Persona.prototype.edad =   Math.floor(Math.random() * 100) +1;
+
+          Persona.prototype.cumpliranyo = function(){
+            this.edad++;
+            return this.edad;
+          }
+
+      persona1.telefono="67777777";
+
+
+  for (var v in persona1) {
+    document.write(persona1[v]);
+    }
+
+    document.write("<br />")
+
+    for (var v in persona2) {
+      document.write(persona2[v]);
+      }
+
+
+
+    </script>
+  </body>
+</html>
