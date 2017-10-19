@@ -6,18 +6,50 @@
   </head>
   <body>
     <script type="text/javascript">
-color
 
       function Persona (nombre,apellidos){
         this.nombre= nombre || "Anónimo";
         this.apellidos= apellidos;
-        saludar = function (){
-
+        this.saludar = function (){
+        console.log("Hola me llamo " + this.nombre + " " + this.apellidos);
         }
-
       }
 
       var persona1 = new Persona("", "Hernández");
+      var persona2 = new Persona("Alberto", "Baggetto");
+
+//observo si pertenecen a la instancia Persona
+      if (persona1 instanceof Persona) {
+   console.log("persona1 si que es una instancia de Persona");
+}
+else{
+  console.log("Persona1 no es una instancia de Persona");
+}
+
+if (persona2 instanceof Persona) {
+console.log("persona2 si que es una instancia de Persona");
+}
+else{
+console.log("persona2 no es una instancia de Persona");
+}
+
+//llamo al método saludar
+persona1.saludar();
+persona2.saludar();
+
+//Para mostrar los atributos
+document.write("persona1 tiene los atributos: " + Object.keys(persona1));
+document.write("<br />")
+document.write("persona2 tiene los atributos: " + Object.keys(persona2));
+
+
+document.write("<h4> En la consola están el resultado de las llamada a los métodos</h4>")
+
+
+
+
+
+
     </script>
   </body>
 </html>
