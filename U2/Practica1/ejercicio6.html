@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 6</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+document.write("<h3>En la consola están los estudiantes</h3>")
+     //Constructor Persona
+      function Persona (nombre,apellidos){
+        this.nombre= nombre || "Anónimo";
+        this.apellidos= apellidos;
+        this.saludar = function (){
+        console.log("Hola me llamo " + this.nombre + " " + this.apellidos);
+        }
+      }
+
+      //Constructor Estudiante
+      function Estudiante(nombre,apellidos,estudios,notamedia){
+        Persona.call(this, nombre, apellidos);
+        this.estudios=estudios;
+        this.notamedia=notamedia.toFixed(2);
+        this.Recuperar = function(){
+          if(this.notamedia<5){
+            this.notamedia=5;
+          }
+        }
+
+      }
+
+var estudiante1 = new Estudiante("Alberto","Hernández","DAW",4);
+var estudiante2 = new Estudiante("Ricardo","Montés","DAW",7);
+var estudiante3 = new Estudiante("Sergio","Sahuquillo","DAW",8);
+
+var Lista = new Array (estudiante1,estudiante2,estudiante3);
+
+for (var i in Lista) {
+console.log("El estudiante de " + Lista[i].nombre + " " + Lista[i].apellidos+ " tiene una nota media de "+ Lista[i].notamedia);
+}
+
+
+
+
+
+    </script>
+  </body>
+</html>
