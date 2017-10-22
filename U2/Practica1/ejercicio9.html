@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 9</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+document.write("<h3>En la consola están los estudiantes</h3>")
+     //Constructor Persona
+      function Persona (nombre,apellidos){
+        this.nombre= nombre || "Anónimo";
+        this.apellidos= apellidos;
+        this.saludar = function (){
+        console.log("Hola me llamo " + this.nombre + " " + this.apellidos);
+        }
+      }
+
+      //Constructor Estudiante
+      function Estudiante(nombre,apellidos,estudios,notamedia){
+        Persona.call(this, nombre, apellidos);
+        this.estudios=estudios;
+        this.notamedia=notamedia.toFixed(2);
+        this.Recuperar = function(){
+          if(this.notamedia<5){
+            this.notamedia=5;
+          }
+        }
+
+      }
+
+var estudiante1 = new Estudiante("Alberto","Hernández Baggetto","DAW",4);
+var estudiante2 = new Estudiante("Ricardo","Montés Lozano","DAW",7);
+var estudiante3 = new Estudiante("Sergio","Sahuquillo Aragonés","DAW",8);
+
+var Lista = new Array (estudiante1,estudiante2,estudiante3);
+
+for(var i = 0; i < Lista.length; i++) {
+     var SeparaApellidos = (Lista[i].apellidos).split(" ");
+     document.write("Nombre: " + Lista[i].nombre + "; Primer Apellido: " + SeparaApellidos[0] + "; Segundo Apellido: " + SeparaApellidos[1] + "<br />");
+   }
+
+    </script>
+  </body>
+</html>

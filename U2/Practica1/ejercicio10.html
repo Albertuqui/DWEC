@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 9</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+     //Constructor Persona
+      function Persona (nombre,apellidos){
+        this.nombre= nombre || "Anónimo";
+        this.apellidos= apellidos;
+        this.saludar = function (){
+        console.log("Hola me llamo " + this.nombre + " " + this.apellidos);
+        }
+      }
+
+      //Constructor Estudiante
+      function Estudiante(nombre,apellidos,estudios,notamedia){
+        Persona.call(this, nombre, apellidos);
+        this.estudios=estudios;
+        this.notamedia=notamedia.toFixed(2);
+        this.Recuperar = function(){
+          if(this.notamedia<5){
+            this.notamedia=5;
+          }
+        }
+
+      }
+
+        Estudiante.prototype.crearPassword = function() {
+                 var nombre = ((this.nombre.charAt(0)).toLocaleUpperCase());
+                 var SeparaApellidos = this.apellidos.split(" ");
+                 var ApellidosMinusculas = (SeparaApellidos[0]).toLocaleLowerCase();
+                 while(ApellidosMinusculas.search("e") >= 0){
+                  ApellidosMinusculas= ApellidosMinusculas.replace('e',3);
+                 }
+                while(ApellidosMinusculas.search("a") >= 0){
+                  ApellidosMinusculas = ApellidosMinusculas.replace('a',4);
+                 }
+
+                var  cantnombre = this.nombre.length;
+              contraseñafinal = nombre.concat(ApellidosMinusculas,cantnombre);
+                 document.write(contraseñafinal);
+               }
+
+
+
+var estudiante1 = new Estudiante("Alberto","Hernandez Baggetto","DAW",4);
+var estudiante2 = new Estudiante("Ricardo","Montes Lozano","DAW",7);
+var estudiante3 = new Estudiante("Sergio","Sahuquillo Aragonés","DAW",8);
+
+var Lista = new Array (estudiante1,estudiante2,estudiante3);
+
+for(var i = 0; i < Lista.length; i++) {
+     var SeparaApellidos = (Lista[i].apellidos).split(" ");
+     document.write("<br /> "+ "<b> Nombre: </b>" + Lista[i].nombre + "; <b>Primer Apellido: </b>" + SeparaApellidos[0] + "; <b>Segundo Apellido: </b>" + SeparaApellidos[1] + " ; <b> Contraseña : </b>");
+      Lista[i].crearPassword();
+   }
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
