@@ -9,16 +9,16 @@
   var frase = "Esto es un String";
   var frase1 =" y esto un string más largo ";
 
-  document.write(frase.concat(frase1));
+  document.write("<b> Los dos string concatenados: </b> " + frase.concat(frase1));
   document.write("<br />");
 
-    document.write(frase.concat(frase1.trim()));
+    document.write("<b> Los dos string concatenados sin espacios: </b>" + frase.concat(frase1.trim()));
     document.write("<br />");
 
-    document.write(frase.concat(frase1.trim()).replace("largo", "bonito"));
+    document.write("<b> Concatenados y cambiando 'largo' por 'bonito': </b> " + frase.concat(frase1.trim()).replace("largo", "bonito"));
 
 document.write("<br />");
-    document.write((frase.concat(frase1.trim())).concat("i".repeat(20)));
+    document.write(("<b>Los dos string concatenados y añadiendo la 'i' 20 veces: </b> " + frase.concat(frase1.trim())).concat("i".repeat(20)));
 
 </script>
   </body>
