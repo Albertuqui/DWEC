@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 1</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var d = new Date();
+    var ndia = d.getDate();
+    var nmes = d.getMonth()+1;
+    var año = d.getFullYear();
+    var hora = d.getHours();
+    var segundos= d.getSeconds();
+  var minutos = d.getMinutes();
+      var dialetra = d.getDay();
+
+
+console.log("El día (del 1 al 31) es: " + ndia);
+console.log("El mes(del 1 al 12) es: " + nmes);
+console.log("Me saca un número menos del mes porque el Objeto Date empieza a contar con el 0");
+console.log("El año es: " + año);
+switch (dialetra) {
+  case 0:
+  console.log("El día de la semana es:  Domingo");
+  break;
+  case 1 :
+  console.log("El día de la semana es: Lunes");
+  break;
+  case 2 :
+    console.log("El día de la semana es: Martes");
+  break;
+  case 3 :
+    console.log("El día de la semana es: Miércoles");
+  break;
+  case 4 :
+  console.log("El día de la semana es:  Jueves");
+  break;
+  case 5 :
+    console.log(" El día de la semana es: Viernes");
+  break;
+  default:
+    console.log("El día de la semana es: Sábado")
+}
+console.log("El día es : " + ndia + "/" + nmes + "/" + año );
+console.log("Es la hora (del 1 al 23) : " + hora);
+console.log("La fecha completa es : " + ndia + "/" + nmes + "/" + año + " " + hora + ":" + minutos + ":" + segundos);
+
+    </script>
+  </body>
+</html>
