@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 4</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var miarray = [24,27,30,18];
+
+      console.log(miarray.every(function(valor) {
+      return typeof(valor)=="number";
+     }));
+
+
+     console.log(miarray.some(function(elemento) {
+    return (elemento<20);
+}));
+
+
+var a = [4, 21, 33, 12, 9, 54];
+
+console.log(a.reduce(function(total,num) {
+return (total+num);
+}));
+
+    </script>
+
+  </body>
+</html>
