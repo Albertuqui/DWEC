@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 5</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+//Codigo copiado del ejercicio 6 de U2Ejercicios1 tal y como pide ele ejercicio
+
+    function Persona (nombre,apellidos){
+      this.nombre= nombre || "Anónimo";
+      this.apellidos= apellidos;
+      this.saludar = function (){
+      console.log("Hola me llamo " + this.nombre + " " + this.apellidos);
+      }
+    }
+
+    function Estudiante(nombre,apellidos,estudios,notamedia){
+      Persona.call(this, nombre, apellidos);
+      this.estudios=estudios;
+      this.notamedia=notamedia.toFixed(2);
+      this.Recuperar = function(){
+        if(this.notamedia<5){
+          this.notamedia=5;
+        }
+      }
+
+    }
+
+    var   estudiante1 = new Estudiante("Alberto","Hernández","DAW",7);
+    var   estudiante2 = new Estudiante("Ricardo","Montés","DAW",8);
+    var   estudiante3 = new Estudiante("Sergio","Sahuquillo","DAW",4);
+
+var Lista = new Array (estudiante1,estudiante2,estudiante3);
+
+//Aquí acaba el codigo copiado
+
+
+//ejercicio5 de U2Ejercicios2. Ordenar los estudiantes por nota media
+
+Estudiante.prototype.toString= function(){
+  document.write(this.nombre + " " + this.apellidos + " " +  this.estudios + " " + "(" + this.notamedia + ")" + "<br />");
+}
+
+Lista.sort(function(p1,p2){
+  return p1.notamedia-p2.notamedia;
+});
+
+Lista.toString();
+
+    </script>
+  </body>
+</html>

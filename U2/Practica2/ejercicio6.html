@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 6. U2Ejercicios2</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var ar1  = [1,2,3,"hola",true,false,"soy",7,"alberto",true];
+    console.log("Mi array: ")
+      console.log(ar1);
+
+        console.log("Mi array en números : ");
+    var  arraynumeros = ar1.map(function(numeros) {
+          return Number(numeros);
+          });
+
+          console.log(arraynumeros);
+
+console.log("Mi array en números sin NaN : ");
+    console.log(arraynumeros.filter(function(filtrado) {
+      return !isNaN(filtrado);
+    }));
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

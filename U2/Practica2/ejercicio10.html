@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejercicio 10</title>
+<style media="screen">
+button.iniciar {
+  margin-left: 40%;
+}
+</style>
+</head>
+<body>
+<button class="iniciar" onclick="hacerclick = setInterval(Hora,5000)">Iniciar reloj en consola</button>
+<button onclick="clearTimeout(hacerclick)">Parar reloj en consola</button>
+
+
+<script>
+
+  function Hora() {
+    console.clear();
+      var d = new Date();
+    console.log(d.toLocaleTimeString());
+  }
+</script>
+</body>
+</html>

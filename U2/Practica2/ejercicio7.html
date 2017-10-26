@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio7. U2Ejercicios2</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    console.log("apartado a: ");
+      var a = [4, 21, 33, 12, 9, 54];
+  console.log(a);
+      a.forEach(function(num, indice, array) {
+        console.log( array[indice]  + " *2 es: " + num*2);
+    });
+
+    console.log(a.map(function(num) {
+    return num*2; }));
+
+console.log("apartado b: ");
+
+var ar1  = [1,2,3,"hola",true,false,"soy",7,"alberto",true];
+
+var  arraynumeros = ar1.map(function(numeros) {
+      return Number(numeros);
+      });
+
+var arraysinnan = arraynumeros.filter(function(filtrado) {
+  return !isNaN(filtrado);
+});
+
+
+arraysinnan.forEach(function(num, indice, array) { // índice y array son parámetros opcionales
+console.log("Índice " + indice + " en [" + array + "] es " + num);
+});
+
+    </script>
+  </body>
+</html>
