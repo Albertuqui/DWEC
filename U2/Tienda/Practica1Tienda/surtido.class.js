@@ -42,6 +42,11 @@ function Surtido(productos){
         var v = this.productos.filter(function(num) {
           return num.vegano;
   });
-return v; }
+return v;
+}
+
+
+
+
 
     }

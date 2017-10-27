@@ -3,7 +3,7 @@ var p = new Surtido(productos);
 p.dibujarSurtido();
 
 function recarga(){
-
+location.reload();
 }
 
 function verPorPrecioMas(p){
