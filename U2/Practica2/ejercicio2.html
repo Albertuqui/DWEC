@@ -2,12 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ejercicio2</title>
+    <title>Ejercicio 2</title>
+    <script type="text/javascript">
+    var fechavacaciones = prompt("Introduce la fecha de las próximas vacaciones en formato 'aaaa-mm-dd' o 'aaaa/mm/dd'");
+    var fecha = new Date(fechavacaciones);
+
+    var milisegundos = Date.parse(fecha);
+
+    var milisegundosdia = 1000 * 24 * 60 * 60;
+    var calcular = milisegundos - Date.now();
+    var dias = calcular/milisegundosdia;
+    document.write("<h1>Quedan " + Math.ceil(dias) + " dias para tus vacaciones</h1>");
+    </script>
   </head>
   <body>
-    <script type="text/javascript">
 
-
-    </script>
   </body>
 </html>
