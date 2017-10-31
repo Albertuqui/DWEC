@@ -1,4 +1,4 @@
- function usuario (compra){
+ function Usuario (compra){
   this.id =  Math.floor(Math.random() * 1000) +1;
   this.idioma = navigator.language;
   this.navegador = navigator.userAgent;
@@ -15,8 +15,35 @@
   var importefinal = this.compra.reduce(function(total,n){
     return total + n.precio;
   },0);
-  this.importe=importecompra;
+  this.importe=importefinal;
   }
+  this.mostrarCompra =function(compra){
+    cuerpo.innerHTML = "";
+    var str = "";
+    if(compra == undefined){
+      for (var i = 0; i < this.compra.length; i++) {
+        str += "<div>";
+        str += "<img src='" + this.compra[i].foto + "' alt= '";
+        str += this.compra[i].nombre + "'>";
+        str += "<p> Producto: " + this.compra[i].nombre + "</p>";
+        str += "<p> " + this.compra[i].descripcion + "</p>";
+        str += "<p><b> " + this.compra[i].precio + " €</b></p>";
+        str += "</div>";
+}
+}
+else{
+  for (var i = 0; i < compra.length; i++) {
+    str += "<div>";
+    str += "<img src='" + compra[i].foto + "' alt= '";
+    str += compra[i].nombre + "'>";
+    str += "<p> Producto: " + compra[i].nombre + "</p>";
+    str += "<p> " + compra[i].descripcion + "</p>";
+    str += "<p><b> " + compra[i].precio + " €</b></p>";
+    str += "</div>";
+}
+}
+cuerpo.innerHTML= str;
+}
 
 
 
