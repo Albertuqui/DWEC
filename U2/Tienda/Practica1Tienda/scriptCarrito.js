@@ -20,8 +20,7 @@ function hacerPedido(){
   if (usuario1.compra.length>0) {
         var response = confirm("¿Aceptas las condiciones de pago?");
         if(response) {
-          var v = window.open("","","");
-          v.location.assign("pedidoOK.html");
+        location.assign("pedidoOK.html");
         }
          else {
             alert("No has aceptado las condiciones. No puedes hacer el pedido.");
