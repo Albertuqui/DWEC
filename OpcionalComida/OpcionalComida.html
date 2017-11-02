@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Comida</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+        function Producto (codigo,nombre,ingredientes){
+      this.codigo=codigo;
+      this.nombre=nombre;
+      this.precio= (Math.random() *(3-1)+1).toFixed(2);
+      this.ingredientes = ingredientes.sort();
+      this.imprimeDatos = function(){
+        document.write("<h5> Código " + this.codigo + "nombre : " + this.nombre + " precio: " + this.precio + "</h5>");
+      }
+      }
+
+
+      Producto.prototype.borrarIngrediente= function() {
+          if (this.ingredientes.length>0){
+            this.ingredientes.pop();
+      }
+      else{
+        alert("No quedan ingredientes");
+      }
+    }
+
+      Producto.prototype.buscaInfo = function(){
+            window.open("https://www.google.es/search?q=" + this.nombre +"&sourceid=opera&ie=UTF-8&oe=UTF-8");
+      }
+
+
+      var producto1 = new Producto(1,"pan", ["larina","aevadura"]);
+
+
+
+
+    </script>
+  </body>
+</html>
