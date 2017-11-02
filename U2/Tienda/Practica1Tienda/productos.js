@@ -40,5 +40,21 @@ var productos = [
     foto:'https://media2.ocu.org//images/CE9E19F522012DD79E635A40B861F4F8C3DAB876/w150-c4/hf31300041604001.jpg',
     precio: 5.30,
     vegano: true
-  }
+  },
+  {
+    nombre:'4 yogures',
+    descripcion: 'Pack de 4 yogures blancos azucarados',
+    foto:'https://cdn11.hiberus.com/images/productos/111070/111070_1.jpg',
+    precio: 1.50,
+    vegano: false
+  },
+  {
+    nombre:'Queso',
+    descripcion: 'Cuarto de queso',
+    foto:'http://gourmet-jamonjamon.com/512-large_default/cheese-asiago-250g-approx.jpg',
+    precio: 2,
+    vegano: false
+  },
 ];
+
+var compra = [productos[2],productos[4],productos[5],productos[6],productos[7]];

@@ -28,5 +28,5 @@ function showPrompt() {
 
 
 function hola(){
-  location.replace("carrito.html");
+window.print();
 }

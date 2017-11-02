@@ -17,6 +17,7 @@
   },0);
   this.importe=importefinal;
   }
+
   this.mostrarCompra =function(compra){
     cuerpo.innerHTML = "";
     var str = "";
