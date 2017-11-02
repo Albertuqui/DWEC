@@ -1,8 +1,10 @@
+'use strict';
+
  if(navigator.cookieEnabled==false){
    alert("No has habilitado las cookies");
  }
 
-usuario1 = new Usuario(productos);
+var usuario1 = new Usuario(productos);
 
 usuario1.calcularImporte();
 usuario1.mostrarCompra();
@@ -15,7 +17,7 @@ function hacerPedido(productos){
   if (productos>0) {
         var response = confirm("¿Aceptas las condiciones de pago?");
         if(response) {
-          var v = window.open("","","height=200,width=200");
+          var v = window.open("","","");
           v.location.assign("pedidoOK.html");
         }
          else {
@@ -25,4 +27,16 @@ function hacerPedido(productos){
   else{
     alert("No puedes realizar pedidos porque no hay productos");
   }
+}
+
+function condCompraOnline(){
+
+}
+
+function Inicio(){
+ history.back();
+}
+
+function Imprimir(){
+  window.print();
 }

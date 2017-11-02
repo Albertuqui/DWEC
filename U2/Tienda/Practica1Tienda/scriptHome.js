@@ -2,9 +2,6 @@ var p = new Surtido(productos);
 //var micompra = [productos[0], productos[3]];
 p.dibujarSurtido();
 
-function recarga(){
-location.reload();
-}
 
 function verPorPrecioMas(p){
   p.ordenPrecioMas();
@@ -18,4 +15,16 @@ function verPorPrecioMenos(p){
 function verVegano(){
   var v= p.filtrarVegano();
   p.dibujarSurtido(v);
+}
+
+function recarga(){
+location.reload();
+}
+
+function condCompraOnline(){
+
+}
+
+function navegarCarrito(){
+  location.replace("carrito.html");
 }
