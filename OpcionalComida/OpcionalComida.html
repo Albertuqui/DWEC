@@ -13,30 +13,52 @@
       this.precio= (Math.random() *(3-1)+1).toFixed(2);
       this.ingredientes = ingredientes.sort();
       this.imprimeDatos = function(){
-        document.write("<h5> Código " + this.codigo + "nombre : " + this.nombre + " precio: " + this.precio + "</h5>");
+        document.write("<p>Código: " + this.codigo + "</br>"+  "Nombre : " + this.nombre + "</br>" + " Precio: " + this.precio + "</p>");
       }
-      }
+    }1
 
 
-      Producto.prototype.borrarIngrediente= function() {
-          if (this.ingredientes.length>0){
+      Producto.prototype.borraIngrediente= function() {
+          if (this.ingredientes.length>1){
             this.ingredientes.pop();
       }
       else{
-        alert("No quedan ingredientes");
+        alert("Sólo te queda un ingrediente. Ya no puedes borrar.");
       }
     }
 
       Producto.prototype.buscaInfo = function(){
-            window.open("https://www.google.es/search?q=" + this.nombre +"&sourceid=opera&ie=UTF-8&oe=UTF-8");
+            window.open("https://www.google.es/search?q=" + this.nombre);
       }
 
+      Producto.prototype.verIngredientes = function(){
+        var misingredientes= window.open("", "ingredientes", "width=200, height=150");
+        for (var i = 0; i < this.ingredientes.length; i++) {
+          misingredientes.document.write( this.ingredientes[i] + "</br>" );
+        }
+                    misingredientes.document.write( "</br>" );
+            misingredientes.document.write("<button onclick='window.close()'>Cerrar página</button>");
+        }
 
-      var producto1 = new Producto(1,"pan", ["larina","aevadura"]);
 
+  var producto1=  new Producto(1, "Espaguetis", ["Espaguetis", "Tomate","Queso","Bacon"]);
+  var producto2 = new Producto(2, "Cocido", ["Fideos", "Garbanzos", "Pollo","Patata"]);
+  var producto3 = new Producto(3, "Hamburguesa", ["Pan", "Carne", "Ketchup", "Lechuga"]);
+
+  var Lista = new Array (producto1,producto2,producto3);
+
+for (var i = 0; i < Lista.length; i++) {
+    Lista[i].imprimeDatos();
+    document.write("<button onclick='Lista[ "+ i + "].verIngredientes()'>Ver Ingredientes</button> ");
+   document.write("<button onclick='Lista[ " + i + "].borraIngrediente()'>Eliminar ingrediente</button> ");
+   document.write("<button onclick='Lista[ " + i + "].buscaInfo()'>Más información</button><br><br>");
+
+
+}
 
 
 
     </script>
+
   </body>
 </html>
