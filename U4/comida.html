@@ -28,9 +28,12 @@
       }
 
       function borrarLista(){
-              modificarh1 = document.getElementsByTagName("P");
-            modificarh1.removeChild(modificarh1.lastChild);
-      }
+        var nodes = document.getElementsByTagName("P");
+        for (var i = 0, limite=nodes.length; i < limite  ; ++i) {
+          nodes[0].parentNode.removeChild(nodes[0]);
+}
+              }
+
 
     </script>
   </head>
