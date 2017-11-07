@@ -1,0 +1,36 @@
+<body>
+<h1>Sugerencias</h1>
+<form action="#" method="post">
+<p class="destacado">Sugerencias:</p>
+<br>
+<textarea name="sugerencia" rows="20" cols="50"></textarea>
+<button type="button" name="button" onclick="mostrar()">Enviar</button>
+</form>
+<p id="resultado">Gracias por participar</p>
+<script type="text/javascript">
+//modificar H1
+modificarh1 = document.getElementsByTagName("H1");
+modificarh1[0].innerHTML ="Titulo cambiado";
+//modificar elementos de clase destacado
+var clased = document.getElementsByClassName("destacado");
+clased[0].style.fontWeight="bold";
+//ocultar elemento de id resultado
+  var idocultar = document.getElementById("resultado");
+  idocultar.style.display="none";
+
+//Selecciona el elemento con name “sugerencia”
+//y añádele un atributo para que cumplimentar este elemento sea obligatorio
+var namesugerencia = document.getElementsByName("sugerencia");
+namesugerencia[0].setAttribute("required","required");
+
+//Crea la función mostrar que permite mostrar el p con id resultado
+//si pulsamos el botón
+function mostrar(){
+  var idmostrar = document.getElementById("resultado");
+  idmostrar.style.display="block";
+}
+
+
+
+</script>
+</body>

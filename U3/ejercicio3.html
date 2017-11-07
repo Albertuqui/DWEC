@@ -1,0 +1,36 @@
+<body onload="cargarp()">
+<div id="contiene_ps">
+<p>?</p>
+<p>?</p>
+<p>?</p>
+<p>?</p>
+<p>?</p>
+<p>?</p>
+<div id="cambiame">
+<input type="color" id="txtColor" value="#FF0000">
+<button id="actualizar" onclick="recorreTag()">Modificar los párrafos!</button>
+</div>
+</div>
+<script type="text/javascript">
+
+function cargarp(){
+modificarp = document.getElementsByTagName("P");
+  for (var i = 0; i < modificarp.length; i++) {
+    modificarp[i].innerHTML ="Elemento " + (i+1);
+  }
+}
+
+function recorreTag() {
+cambiarcolor = document.getElementById("txtColor").value;
+modificarp = document.getElementsByTagName("P");
+        for (var i = 0; i < modificarp.length; i++) {
+          modificarp[i].style.color = cambiarcolor;
+        }
+}
+
+
+
+
+
+</script>
+</body>
