@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script type="text/javascript">
+  function añadirElemento(){
+    var txt= document.getElementsByTagName("input")[0];
+    var seleccion = document.getElementById("selector");
+
+    if(txt.value != ""  && seleccion.value !=0){
+      var miP = document.createElement("p");
+      miP.innerHTML = txt.value;
+      document.body.appendChild(miP);
+      color = selector.value;
+      miP.style.color= color;
+      miP.setAttribute("onclick","borrarElemento()");
+    }
+    else{
+    alert("Te has olvidado de poner nombre o categoría");
+    }
+
+      }
+
+      function borrarElemento(){
+        var elimino = document.querySelector("p:hover");
+        elimino.parentNode.removeChild(elimino);
+      }
+
+      function borrarLista(){
+              modificarh1 = document.getElementsByTagName("P");
+            modificarh1.removeChild(modificarh1.lastChild);
+      }
+
+    </script>
+  </head>
+  <body>
+    <h1>Lista de la compra</h1>
+    <input type="text" name="texto"></input>
+    <select class="selector" id="selector">
+      <option value=0>Escoge una opción</option>
+      <option value="red">Carnicería</option>
+      <option value="navy">Pescadería</option>
+      <option value="cyan">Congelados</option>
+      <option value="gold">Panadería</option>
+      <option value="magenta">Perfumería</option>
+    </select>
+    <button onclick="añadirElemento()">Añadir elemento</button>
+    <button onclick="borrarLista()">Borrar lista</button>
+    <hr>
+  </body>
+</html>
