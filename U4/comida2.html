@@ -9,22 +9,40 @@
     var seleccion = document.getElementById("selector");
 
     if(txt.value != ""  && seleccion.value !=0){
-      var miP = document.createElement("p");
-      miP.innerHTML = txt.value;
-      document.body.appendChild(miP);
-      color = selector.value;
-      miP.style.color= color;
-      miP.setAttribute("onclick","borrarElemento()");
+
+      if(document.getElementById(selector.value)){
+        var miP = document.createElement("p");
+          miP.innerHTML = txt.value;
+          var div = document.getElementById(selector.value);
+          div.appendChild(miP);
+        var color = seleccion.value;
+        miP.style.color= color;
+        miP.setAttribute("onclick","borrarElemento()");
+        div.style.border = "thin solid " + selector.value;
     }
     else{
+      var miP = document.createElement("p");
+        miP.innerHTML = txt.value;
+      var div = document.createElement("div");
+      div.setAttribute("id",selector.value);
+        document.body.appendChild(div);
+          div.appendChild(miP);
+      var color = seleccion.value;
+      miP.style.color= color;
+      miP.setAttribute("onclick","borrarElemento()");
+        div.style.border = "thin solid " + selector.value;
+    }
+  }else{
     alert("Te has olvidado de poner nombre o categoría");
     }
 
       }
 
+
       function borrarElemento(){
+          var list = document.getElementById(selector.value);
         var elimino = document.querySelector("p:hover");
-        elimino.parentNode.removeChild(elimino);
+    list.removeChild(elimino.childNodes[0]);
       }
 
       function borrarLista(){
