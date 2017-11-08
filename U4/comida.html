@@ -29,7 +29,8 @@
 
       function borrarLista(){
         var nodes = document.getElementsByTagName("P");
-        for (var i = 0, limite=nodes.length; i < limite  ; ++i) {
+        limite= nodes.length;
+        for (var i = 0; i < limite  ; i++) {
           nodes[0].parentNode.removeChild(nodes[0]);
 }
               }
