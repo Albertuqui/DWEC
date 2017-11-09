@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Crea elementos del DOM</title>
+<script type="text/javascript">
+onload = function creaDOM(){
+  var h1 = document.createElement("h1");
+  h1.innerHTML = "Hola";
+  h1.style.color="blue";
+  h1.style.fontFamily = "Arial";
+  document.body.appendChild(h1);
+  var img = document.createElement("img");
+    img.src="foto.jpg";
+  h1.appendChild(img);
+  img.style.width="50px";
+  img.style.height="50px";
+}
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -20,11 +20,15 @@ sunt in culpa qui officia deserunt mollit anim id est laborum.
 <script type="text/javascript">
   function modificarSize(){
     document.querySelector("h1").style.fontSize = combo.value;
-    var elementosp = document.querySelectorAll("p");
- length = elementosp.length;
-for ( var i = 0; i < length; i++) {
-elementosp[i].style.fontSize = combo.value;
+    var elems = document.querySelectorAll("p");
+var index = 0, length = elems.length;
+for ( ; index < length; index++) {
+elems[index].style.fontSize = combo.value;
   }
 }
+
+var p = document.getElementsByTagName("p");
+    p[0].parentNode.removeChild(p[0]);
+
 </script>
 </body>

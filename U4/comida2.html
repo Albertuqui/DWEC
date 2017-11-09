@@ -46,7 +46,11 @@
       padre.parentNode.removeChild(padre);
         var p = document.getElementsByTagName("P");
         if(p.length==0){
-          document.getElementById(selector.value).style.border="none";
+          var elems = document.querySelector("div");
+  var index = 0, length = elems.length;
+  for ( ; index < length; index++) {
+      elems[index].style.border= "none";
+  }
         }
       }
 
