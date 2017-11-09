@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title></title>
 <script type="text/javascript">
+
+
   function añadirElemento(){
     var txt= document.getElementsByTagName("input")[0];
     var seleccion = document.getElementById("selector");
@@ -40,16 +42,22 @@
 
 
       function borrarElemento(){
-          var list = document.getElementById(selector.value);
-        var elimino = document.querySelector("p:hover");
-    list.removeChild(elimino.childNodes[0]);
+        var padre = document.querySelector("p:hover");
+      padre.parentNode.removeChild(padre);
+        var p = document.getElementsByTagName("P");
+        if(p.length==0){
+          document.getElementById(selector.value).style.border="none";
+        }
       }
 
+
+
+
       function borrarLista(){
-        var p= document.getElementsByTagName("P");
-        var limite= p.length;
+      var div = document.getElementsByTagName("DIV");
+        var limite= div.length;
         for (var i = 0; i < limite  ; i++) {
-          p[0].parentNode.removeChild(p[0]);
+          div[0].parentNode.removeChild(div[0]);
 }
               }
 
@@ -60,10 +68,10 @@
     <h1>Lista de la compra</h1>
     <input type="text" name="texto"></input>
     <select class="selector" id="selector">
-      <option value=0>Escoge una opción</option>
-      <option value="red">Carnicería</option>
-      <option value="navy">Pescadería</option>
-      <option value="cyan">Congelados</option>
+      <option value=0 >Escoge una opción</option>
+      <option value="red" >Carnicería</option>
+      <option value="navy" >Pescadería</option>
+      <option value="cyan" >Congelados</option>
       <option value="gold">Panadería</option>
       <option value="magenta">Perfumería</option>
     </select>
