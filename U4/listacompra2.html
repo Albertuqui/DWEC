@@ -9,7 +9,11 @@
     var txt= document.getElementsByTagName("input")[0];
     var seleccion = document.getElementById("selector");
 
-    if(txt.value != ""  && seleccion.value !=0){
+    if(txt.value == "" ){
+      alert("Has olvidado poner el nombre");
+}
+else{
+    if(selector.value != 0){
 
       if(document.getElementById(selector.value)){
         var miP = document.createElement("p");
@@ -34,12 +38,12 @@
         div.style.border = "thin solid " + color;
     }
   }else{
-    alert("Te has olvidado de poner nombre o categoría");
+    alert("Te has olvidado de poner categoría");
     }
 
       }
 
-
+}
       function borrarElemento(){
         var hijo = document.querySelector("p:hover");
       padre= document.querySelector("p:hover").parentNode;

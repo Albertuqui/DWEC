@@ -8,8 +8,12 @@
     var txt= document.getElementsByTagName("input")[0];
     var seleccion = document.getElementById("selector");
 
-    if(txt.value != ""  && seleccion.value !=0){
-      var miP = document.createElement("p");
+    if(txt.value == ""){
+	alert("Has olvidado poner un nombre");
+	}
+	else {
+		if(selector.value != 0){
+        var miP = document.createElement("p");
       miP.innerHTML = txt.value;
       document.body.appendChild(miP);
       color = selector.value;
@@ -17,10 +21,11 @@
       miP.setAttribute("onclick","borrarElemento()");
     }
     else{
-    alert("Te has olvidado de poner nombre o categoría");
+    alert("Has olvidado poner categoría");
     }
 
       }
+	  }
 
       function borrarElemento(){
         var elimino = document.querySelector("p:hover");
