@@ -9,9 +9,12 @@
     var txt= document.getElementsByTagName("input")[0];
     var seleccion = document.getElementById("selector");
 
-    if(txt.value == "" ){
-      alert("Has olvidado poner el nombre");
-}
+    if(txt.value == "" && selector.value ==0){
+	alert("Rellena los datos");
+	}
+  else if(txt.value == "" && selector.value !=0){
+    alert("Has olvidado poner el nombre");
+  }
 else{
     if(selector.value != 0){
 
