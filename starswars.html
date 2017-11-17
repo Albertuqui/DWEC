@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style media="screen">
+	.columna{
+		display:inline-block;
+		width: 180px;
+		height: 20px;
+		border-radius: 8px;
+		border: 2px solid navy;
+		text-align: center;
+	}
+</style>
+<script charset="utf-8">
+
+var StarWarsFilms=[
+	{titulo: "Episodi IV", nombre:"Una Nueva Esperanza", any: 1977 ,director: "George Lucas"},
+	{titulo: "Episodi V", nombre:"El Imperio Contraataca", any:1980, director: "George Lucas"},
+	{titulo: "Episodi VI", nombre:"El Retorno del Jedi", any:1984, director: "George Lucas"},
+	{titulo: "Episodi I", nombre:"La Amenaza Fantasma", any:1999, director: "George Lucas"},
+	{titulo: "Episodi II", nombre:"El ataque de los clones", any:2002, director: "George Lucas"},
+	{titulo: "Episodi III", nombre:"La Venganza de los Sith", any:2005, director: "George Lucas"},
+	{titulo: "Episodi VII", nombre:"El Despertar de la Fuerza", any:2015, director: "J.J. Abrams"}
+     ];
+
+onload = function cargaInfo(){
+
+  var divtabla = document.createElement("div");
+  document.body.appendChild(divtabla);
+
+    var divfila = document.createElement("div");
+    for (var campo in StarWarsFilms[0]) {
+      divCelda = document.createElement("div");
+      var txt;
+      txt = document.createTextNode(campo);
+      divCelda.appendChild(txt);
+      divCelda.setAttribute("class","columna");
+      divfila.appendChild(divCelda);
+    }
+      divtabla.appendChild(divfila);
+
+
+
+
+	/*Aquí tengo que crear los nodos del DOM*/
+
+	/*Recorro el array de objetos:*/
+	StarWarsFilms.forEach(function(objectoPeli){
+    	divFila = document.createElement("div");
+	  /*Recorro los campos del objeto*/
+	  for (campo in objectoPeli){
+      divCelda = document.createElement("div");
+      txt = document.createTextNode(objectoPeli[campo]);
+      divCelda.appendChild(txt);
+      divCelda.setAttribute("class", "columna");
+      divFila.appendChild(divCelda);
+	  }
+    divtabla.appendChild(divFila);
+	});
+
+} //Cierro cargaInfo
+
+</script>
+</head>
+<body>
+</body>
+</html>

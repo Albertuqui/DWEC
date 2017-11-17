@@ -28,5 +28,5 @@ function condCompraOnline(){
 }
 
 function navegarCarrito(){
-  location.replace("carrito.html");
+  location.assign("carrito.html");
 }
