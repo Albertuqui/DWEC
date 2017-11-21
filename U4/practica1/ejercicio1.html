@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+        function forma1(e){
+        p.style.fontFamily = 'Arial';
+        }
+
+        onload = function(){
+        h1.onwheel = function(e){
+            h1.style.backgroundColor = 'yellow';
+            this.style.fontWeight = 'bold';
+          }
+        }
+
+        function forma3(e){
+          e.target.style.textAlign = 'center';
+        }
+        ondblclick = forma3;
+
+        function forma4(t){
+          t.style.color='purple';
+        }
+
+
+    </script>
+  </head>
+  <body>
+    <div class="div">
+      <h1 id="h1"> Primera página</h1>
+      <h2 id="h2"> Subtítulo de la página </h2>
+      <h3 id="h3" onmouseenter="forma4(this)"> Segundo subtítulo </h3>
+        <p id="p" onclick="forma1(event)">Parrafo</p>
+    </div>
+  </body>
+</html>
