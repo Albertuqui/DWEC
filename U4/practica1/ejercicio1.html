@@ -4,16 +4,13 @@
     <meta charset="utf-8">
     <title></title>
     <script type="text/javascript">
+
         function forma1(e){
         p.style.fontFamily = 'Arial';
         }
 
-        onload = function(){
-        h1.onwheel = function(e){
-            h1.style.backgroundColor = 'yellow';
-            this.style.fontWeight = 'bold';
-          }
-        }
+
+
 
         function forma3(e){
           e.target.style.textAlign = 'center';
@@ -24,11 +21,40 @@
           t.style.color='purple';
         }
 
+        onload = function(){
+          div.oncontextmenu = function(e){
+              e.preventDefault();
+              e.target.style.border = '1px solid black';
+          }
+
+        }
+
+
+
+
+addEventListener("DOMContentLoaded",function(){
+
+        document.querySelector("h3").onmouseover = function(){
+            document.querySelector("h3").innerHTML = "La que has liao pollito"
+          }
+
+          h2 = document.querySelector("h2");
+          h2.addEventListener("mouseout",function(e){
+            this.textContent = "¿Qué está pasando aquí?";
+            e.target.style.color = "orange";
+          });
+
+                h1 = document.querySelector("h1");
+      h1.addEventListener("wheel",function(e){
+      h1.style.backgroundColor = 'yellow';
+          });
+
+    });
 
     </script>
   </head>
   <body>
-    <div class="div">
+    <div id="div">
       <h1 id="h1"> Primera página</h1>
       <h2 id="h2"> Subtítulo de la página </h2>
       <h3 id="h3" onmouseenter="forma4(this)"> Segundo subtítulo </h3>

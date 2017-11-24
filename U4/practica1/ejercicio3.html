@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+          function especial(event){
+          var teclashift= event.shiftKey;
+          if(teclashift){
+            var x = event.clientX;
+            var y = event.clientY;
+            var coordenadas = "cordenada X: " + x + ", Coordenada Y: " + y;
+            console.log(coordenadas);
+          }
+        }
+    </script>
+  </head>
+  <body onclick="especial(event)">
+
+          <div id="div">
+            <h1 id="h1"> Primera página</h1>
+            <h2 id="h2"> Subtítulo de la página </h2>
+            <h3 id="h3"> Segundo subtítulo </h3>
+              <p id="p" >Parrafo</p>
+          </div>
+
+  </body>
+</html>
