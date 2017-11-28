@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    onload = function() {
+      onkeypress = mostrarCaracter;
+      onkeydown = mostrarCaracter;
+    }
+
+
+
+function mostrarCaracter(e){
+  var mensaje = '';
+    mensaje = "<center><font size=7>" + e.keyCode + "</font>";
+  mensaje += " <center><font size=3>" + e.key + "</font>";
+
+    control.innerHTML = mensaje;
+
+  var especial = e.altKey || e.ctrlKey || e.shiftKey || e.metaKey;
+    if (especial){
+      var mensaje = '';
+          mensaje = "<center><font size=7>" + e.keyCode + "</font>";
+        mensaje += " <center><font size=3>" + e.key + " </font>";
+        control.innerHTML = mensaje;
+      console.log("Has pulsado tecla especial");
+    }
+}
+
+    </script>
+  </head>
+  <body>
+    <h3>Pulsa una tecla</h3>
+<div id="control"> </div>
+
+  </body>
+</html>

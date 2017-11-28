@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- <img src="hola.jpg" id="miImg" alt="imagen" width="200"><br>
+       <a href="#nonavegar">Deshabilitar cambio de imagen</a> -->
+
+       <script type="text/javascript">
+       
+       addEventListener("DOMContentLoaded", function(){
+         var mienlace = document.getElementsByTagName("a")[0];
+         var imagen = document.getElementsByClassName("imagen")[0];
+
+         imagen.addEventListener("mouseover", ratonencima);
+
+         function ratonencima(){
+             imagen.src = "adios.jpg";
+         }
+         imagen.addEventListener("mouseout", function(){
+           imagen.src = "hola.jpg";
+         });
+        mienlace.addEventListener("click", function(e){
+           imagen.removeEventListener("mouseover", ratonencima);
+           e.preventDefault();
+         });
+
+       });
+
+       </script>
+
+
+  </head>
+  <body>
+
+    <center>
+      <h1>Pasa el ratón por el emoji para ser feliz</h1>
+      <img src="hola.jpg" class="imagen" alt="" width="300" height="300"><br>
+      <a href="#nonavegar">“Deshabilitar cambio de imagen”</a>
+        </center>
+
+  </body>
+
+</html>
