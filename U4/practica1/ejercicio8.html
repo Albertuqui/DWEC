@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+
+      function tecla(event){
+        var imagen= document.getElementsByTagName("img")[0];
+      if(event.keyCode==43){
+        if(imagen.width <=1024){
+          imagen.width += 25;
+        }
+      }
+      else if(event.keyCode==45){
+              imagen.width -= 25;
+      }
+    }
+
+
+    </script>
+  </head>
+  <body onkeypress="tecla(event)">
+      <img src="adios.jpg"  width="150">
+  </body>
+</html>

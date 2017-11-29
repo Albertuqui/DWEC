@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      window.addEventListener("resize",FuncionResize);
+
+    function FuncionResize(){
+      var w = window.innerWidth;
+       var h = window.innerHeight;
+       document.getElementById("ventana").innerHTML =  w + " x " + h;
+        document.getElementById("ventana").style.backgroundColor ="lightgrey";
+        document.getElementById("ventana").style.textAlign="center";
+          document.getElementById("ventana").style.fontWeight="bold";
+          document.getElementById("ventana").style.width="90px";
+          document.getElementById("ventana").style.border="thick solid black";
+      }
+    </script>
+  </head>
+  <body>
+        <p id="ventana"></p>
+    <center><h1>Redimensiona la ventana</h1></center>
+
+    </div>
+  </body>
+</html>
