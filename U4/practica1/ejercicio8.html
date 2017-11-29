@@ -8,13 +8,18 @@
       function tecla(event){
         var imagen= document.getElementsByTagName("img")[0];
       if(event.keyCode==43){
-        if(imagen.width <=1024){
+        if(imagen.width <1000){
           imagen.width += 25;
+        }
+        if(imagen.width==1000){
+          imagen.width+=24;
         }
       }
       else if(event.keyCode==45){
+        if(imagen.width>=150){
               imagen.width -= 25;
       }
+    }
     }
 
 
