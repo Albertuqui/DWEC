@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio Regalo</title>
+    <style media="screen">
+      .regalo{
+        width:230px;
+        height:200px;
+        background-color: lightgrey;
+        border: 1px solid black;
+        float: left;
+        margin-left: 50px;
+      }
+      div {
+        margin:auto;
+      }
+      .regalo p{
+        margin-top: 0px;
+        font-size: 70px;
+        text-align: center;
+      }
+      .contenedor {
+        margin-left:200px;
+      }
+     .contenedor h1 {
+       margin-left: 350px;
+     }
+
+     .tooltip .tooltiptext {
+       width: 120px;
+       background-color: #555;
+       color: #fff;
+       text-align: center;
+       border-radius: 6px;
+       padding: 5px 0;
+       position: absolute;
+       z-index: 1;
+       bottom: 125%;
+       left: 50%;
+       margin-left: -60px;
+       opacity: 0;
+       transition: opacity 1s;
+   }
+
+   .tooltip .tooltiptext::after {
+       content: "";
+       position: absolute;
+       top: 100%;
+       left: 50%;
+       margin-left: -5px;
+       border-width: 5px;
+       border-style: solid;
+       border-color: #555 transparent transparent transparent;
+   }
+
+   .tooltip:hover .tooltiptext {
+       opacity: 1;
+   }
+   .contenedor p{
+     text-align: center;
+   }
+
+
+
+
+
+    </style>
+    <script type="text/javascript">
+    addEventListener("DOMContentLoaded",function(){
+      regalo1= document.getElementsByClassName("camiseta")[0];
+      regalo1.style.visibility="hidden";
+      regalo2= document.getElementsByClassName("viaje")[0];
+      regalo2.style.visibility="hidden";
+      regalo3= document.getElementsByClassName("mestalla")[0];
+      regalo3.style.visibility="hidden";
+
+
+
+      addEventListener("contextmenu",function(e){
+        e.preventDefault();
+        divid= e.target.id;
+        if(divid=="regalo1"){
+          regalo1= document.getElementsByClassName("camiseta")[0];
+          regalo1.style.visibility="visible";
+        }else if(divid=="regalo2"){
+          regalo2= document.getElementsByClassName("viaje")[0];
+          regalo2.style.visibility="visible";
+        }else if(divid=="regalo3"){
+          regalo3= document.getElementsByClassName("mestalla")[0];
+          regalo3.style.visibility="visible";
+        }
+      });
+
+
+
+
+
+    });
+</script>
+
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1>Escoge un regalo</h1><br><br><br>
+        <p class="camiseta"> 100% algodón </p>
+        <p class="viaje">  Lejos...muy lejos </p>
+        <p class="mestalla"> Blanquinegro </p>
+    <div class="regalo" id="regalo1">
+      <p >?</p>
+        <span class="tooltiptext camiseta"> 100% algodón </span>
+    </div>
+    <div class="regalo" id="regalo2">
+      <p>?</p>
+  <span class="tooltiptext viaje"> Lejos...muy lejos </span>
+    </div>
+    <div class="regalo" id="regalo3">
+      <p>?</p>
+  <span class="tooltiptext mestalla"> Blanquinegro </span>
+    </div>
+  </div>
+  </body>
+</html>
