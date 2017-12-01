@@ -54,6 +54,11 @@ img{
   height:200px;
   visibility: hidden;
 }
+
+.regalo span#interrogante{
+  font-size: 50px;
+  margin-left: 40%;
+}
     </style>
     <script type="text/javascript">
     addEventListener("DOMContentLoaded",function(){
@@ -69,16 +74,16 @@ img{
       frase2.style.visibility="hidden";
       frase3= document.getElementsByClassName("tooltiptext")[2];
       frase3.style.visibility="hidden";
+      //
       // addEventListener("contextmenu",function(e){
       //   e.preventDefault();
       //   divid= e.target.id;
       //   if(divid=="regalo1"){
-      //     function funcion1(){
       //     regalo1= document.getElementsByClassName("camiseta")[0];
       //     regalo1.style.visibility="visible";
       //     frase1= document.getElementsByClassName("tooltiptext")[0];
       //     frase1.style.visibility="visible";
-      //   }
+      //
       //   }else if(divid=="regalo2"){
       //     regalo2= document.getElementsByClassName("viaje")[0];
       //     regalo2.style.visibility="visible";
@@ -95,55 +100,50 @@ img{
       addEventListener("click",function(e){
           var divid= e.target.id;
         if(divid=="regalo1"){
-          function funcion1(){
-             regalo1bis= document.getElementById(divid);
-             regalo1bis.style.visibility="visible";
+
+        ocultar= document.getElementById(divid);
+           ocultar.style.visibility="hidden";
         frase1= document.getElementsByClassName("tooltiptext")[0];
         frase1.style.visibility="hidden";
         img1= document.getElementsByTagName("img")[0];
         img1.style.visibility="visible";
         alert("Te ha tocado la camiseta");
+
         }
-              addEventListener("click",funcion1);
-      }
+
+
       else if(divid=="regalo2"){
-        function funcion2(){
-          hola= document.getElementById("regalo1");
-          adios= document.getElementById("regalo3");
+        ocultar1= document.getElementById(divid);
+           ocultar1.style.visibility="hidden";
         frase2= document.getElementsByClassName("tooltiptext")[1];
         frase2.style.visibility="hidden";
           img2= document.getElementsByTagName("img")[1];
           img2.style.visibility="visible";
           alert("Te llevas un viaje a Rivera Maya");
-          hola.addEventListener("click", function(e){
-             hola.removeEventListener("click", funcion1);
-             alert("Lo sentimos ya te ha tocado Mestalla");
-        });
-        adios.addEventListener("click", function(e){
-           adios.removeEventListener("click", funcion2);
-           alert("Lo sentimos ya te ha tocado Mestalla");
-        });
+
 }
-      }
+
+
 else if(divid=="regalo3"){
   hola= document.getElementById("regalo1");
   adios= document.getElementById("regalo2");
+  ocultar3= document.getElementById(divid);
+     ocultar3.style.visibility="hidden";
   frase3= document.getElementsByClassName("tooltiptext")[2];
   frase3.style.visibility="hidden";
   img3= document.getElementsByTagName("img")[2];
   img3.style.visibility="visible";
     alert("Vas a Mestalla");
-  hola.addEventListener("click", function(e){
-     hola.removeEventListener("click", funcion1);
-     alert("Lo sentimos ya te ha tocado Mestalla");
-});
-adios.addEventListener("click", function(e){
-   adios.removeEventListener("click", funcion2);
-   alert("Lo sentimos ya te ha tocado Mestalla");
-});
+
    }
     });
+
+
+
     });
+
+
+
 </script>
 
   </head>
@@ -157,17 +157,17 @@ adios.addEventListener("click", function(e){
   <br>
   <br>
     <div class="regalo tooltip" id="regalo1">
-      <p >?</p>
-        <img src="camiseta.jpg" alt="">
+      <span id="interrogante">?</span>
+  <img src="camiseta.jpg" alt="">
       <span class="tooltiptext camiseta"> 100% algodón </span>
     </div>
     <div class="regalo tooltip" id="regalo2">
-      <p>?</p>
+      <span id="interrogante">?</span>
     <img src="riveramaya.jpg" alt="">
       <span class="tooltiptext viaje"> Lejos...muy lejos </span>
     </div>
     <div class="regalo tooltip" id="regalo3">
-      <p>?</p>
+      <span id="interrogante">?</span>
       <img src="mestalla.jpg" alt="">
         <span class="tooltiptext mestalla"> Blanquinegro </span>
     </div>
