@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Regalo 2</title>
+  </head>
+  <style>
+  .regalo{
+    width:230px;
+    height:200px;
+    background-color: lightgrey;
+    border: 1px solid black;
+    float: left;
+    margin-left: 50px;
+  }
+  .regalo p{
+    margin-top: 0px;
+    font-size: 70px;
+    text-align: center;
+  }
+  .regalo span {
+    margin-top: -300px;
+  }
+  .contenedor {
+    margin-left:300px;
+  }
+ .contenedor h1 {
+   margin-left: 350px;
+ }
+ .tooltip .tooltiptext {
+   width: 120px;
+   background-color: #555;
+   color: #fff;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+   position: absolute;
+   z-index: 1;
+   opacity: 1;
+}
+.tooltip .tooltiptext::after {
+content: "";
+position: absolute;
+top: 100%;
+left: 50%;
+border-width: 5px;
+border-style: solid;
+border-color: #555 transparent transparent transparent;
+}
+.contenedor p{
+ text-align: center;
+}
+img{
+width:230px;
+height:200px;
+visibility: hidden;
+}
+
+.regalo span#interrogante{
+font-size: 50px;
+margin-left: 40%;
+}
+  </style>
+
+<script type="text/javascript">
+
+
+     addEventListener("DOMContentLoaded", function(e){
+
+       regalo1= document.getElementsByClassName("camiseta")[0];
+       regalo1.style.visibility="hidden";
+       regalo2= document.getElementsByClassName("viaje")[0];
+       regalo2.style.visibility="hidden";
+       regalo3= document.getElementsByClassName("mestalla")[0];
+       regalo3.style.visibility="hidden";
+       frase1= document.getElementsByClassName("tooltiptext")[0];
+       frase1.style.visibility="hidden";
+       frase2= document.getElementsByClassName("tooltiptext")[1];
+       frase2.style.visibility="hidden";
+       frase3= document.getElementsByClassName("tooltiptext")[2];
+       frase3.style.visibility="hidden";
+
+   div1 = document.getElementById("regalo1");
+  div2 = document.getElementById("regalo2");
+    div3 = document.getElementById("regalo3");
+
+    function mostrarimagen1(e){
+      divid= e.target.id;
+      if(divid=="regalo1"){
+              var imagen = document.getElementsByTagName("img")[0];
+      imagen.style.visibility="visible";
+      div1.style.visibility="hidden";
+
+    }}
+
+ function mostrarimagen2(e){
+   divid= e.target.id;
+   if(divid=="regalo2"){
+   var imagen2 = document.getElementsByTagName("img")[1];
+   imagen2.style.visibility="visible";
+   div2.style.visibility="hidden";
+
+}}
+
+
+function mostrarimagen3(e){
+   divid= e.target.id;
+  if(divid=="regalo3"){
+  var imagen3 = document.getElementsByTagName("img")[2];
+  imagen3.style.visibility="visible";
+  div3.style.visibility="hidden";
+
+}
+}
+
+
+
+
+addEventListener("contextmenu",function(e){
+  e.preventDefault();
+  divid= e.target.id;
+  if(divid=="regalo1"){
+    regalo1= document.getElementsByClassName("camiseta")[0];
+    regalo1.style.visibility="visible";
+    frase1= document.getElementsByClassName("tooltiptext")[0];
+    frase1.style.visibility="visible";
+
+  }else if(divid=="regalo2"){
+    regalo2= document.getElementsByClassName("viaje")[0];
+    regalo2.style.visibility="visible";
+    frase2= document.getElementsByClassName("tooltiptext")[1];
+    frase2.style.visibility="visible";
+
+  }else if(divid=="regalo3"){
+    regalo3= document.getElementsByClassName("mestalla")[0];
+    regalo3.style.visibility="visible";
+    frase3= document.getElementsByClassName("tooltiptext")[2];
+    frase3.style.visibility="visible";
+  }
+});
+
+   addEventListener("click", function(e){
+      divid=e.target.id;
+      if(divid=="regalo1"){
+
+    div1.addEventListener("click",mostrarimagen1);
+      frase1= document.getElementsByClassName("tooltiptext")[0];
+      frase1.style.visibility="hidden";
+
+
+      div2.addEventListener("click", function(e){
+      div2.removeEventListener("click",mostrarimagen2);
+      });
+      div3.addEventListener("click", function(e){
+      div3.removeEventListener("click",mostrarimagen3);
+
+      });
+
+  }
+
+
+
+  else if(divid=="regalo2"){
+  div2.addEventListener("click",mostrarimagen2);
+  frase2= document.getElementsByClassName("tooltiptext")[1];
+  frase2.style.visibility="hidden";
+  div1.addEventListener("click", function(e){
+  div1.removeEventListener("click",mostrarimagen1);
+
+  });
+  div3.addEventListener("click", function(e){
+  div3.removeEventListener("click",mostrarimagen3);
+  });
+
+}
+
+else if(divid=="regalo3"){
+div3.addEventListener("click",mostrarimagen3);
+frase3= document.getElementsByClassName("tooltiptext")[2];
+frase3.style.visibility="hidden";
+div1.addEventListener("click", function(e){
+div1.removeEventListener("click",mostrarimagen1);
+});
+div2.addEventListener("click", function(e){
+div2.removeEventListener("click",mostrarimagen2);
+});
+
+}
+
+
+});
+
+
+  //   else if(divid=="regalo2"){
+  //       addEventListener("click", function(e){
+  //     div2.addEventListener("click",mostrarimagen2);
+  //     div1.addEventListener("click", function(e){
+  //     div1.removeEventListener("",mostrarimagen1);
+  //     });
+  //     div3.addEventListener("click", function(e){
+  //     div3.removeEventListener("",mostrarimagen3);
+  //     });
+  //   });
+  // }
+
+
+
+    //  div2.addEventListener("click", function(e){
+    //      divid=e.target.id;
+    //     if(divid="regalo2"){
+    //   div2.addEventListener("click",mostrarimagen2);
+    //   div1.addEventListener("click", function(e){
+    //   div1.removeEventListener("",mostrarimagen1);
+    //   });
+    //   div3.addEventListener("click", function(e){
+    //   div3.removeEventListener("",mostrarimagen3);
+    //   });
+    // }
+    // });
+    //
+    // div3.addEventListener("click", function(e){
+    //     if(divid="regalo3"){
+    //   div3.addEventListener("click",mostrarimagen3);
+    //   div1.addEventListener("click", function(e){
+    //   div1.removeEventListener("",mostrarimagen1);
+    //   });
+    //   div2.addEventListener("click", function(e){
+    //   div2.removeEventListener("",mostrarimagen2);
+    //   });
+    // }
+    // });
+
+    });
+
+        // else if(divid=="regalo2"){
+        //     div2.addEventListener("click",mostrarimagen2);
+        //       var imagen2 = document.getElementsByTagName("img")[1];
+        //     if(imagen2.style.visibility="visible"){
+        //       div1.addEventListener("click",function(e){
+        //         alert("te toco el viaje");
+        //         div1.removeEventListener("click",mostrarimagen1);
+        //       });
+        //
+        //       div3.addEventListener("click",function(e){
+        //         alert("te toco el viaje");
+        //         div3.removeEventListener("click",mostrarimagen3);
+        //       });
+        //     }
+        //   }
+
+
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+  <body>
+    <div class="contenedor">
+      <h1>Escoge un regalo</h1>
+        <p class="camiseta"> 100% algodón </p>
+        <p class="viaje">  Lejos...muy lejos </p>
+        <p class="mestalla"> Blanquinegro </p>
+  <br>
+  <br>
+  <br>
+    <div class="regalo tooltip" id="regalo1">
+      <span id="interrogante">?</span>
+  <img  src="camiseta.jpg" alt="">
+      <span class="tooltiptext camiseta"> 100% algodón </span>
+    </div>
+    <div class="regalo tooltip" id="regalo2">
+      <span id="interrogante">?</span>
+    <img src="riveramaya.jpg" alt="">
+      <span class="tooltiptext viaje"> Lejos...muy lejos </span>
+    </div>
+    <div class="regalo tooltip" id="regalo3">
+      <span id="interrogante">?</span>
+      <img src="mestalla.jpg" alt="">
+        <span class="tooltiptext mestalla"> Blanquinegro </span>
+    </div>
+  </div>
+  </body>
+</html>
