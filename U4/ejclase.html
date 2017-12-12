@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script type="text/javascript">
+    // nodo on+evento o addeventlistener('evento', f(),[t,f])
+    onload= function(){
+  var a = 1;
+  var b = 2;
+  var c = 3;
+  var mip= document.getElementsByTagName("p")[0];
+  mip.onclick = function(a, b, c){
+    console.log(a);
+    console.log(b);
+    console.log(c);
+  }
+}
+  </script>
+  <body>
+<p>Esto es un parrafo</p>
+  </body>
+</html>
