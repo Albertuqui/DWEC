@@ -136,25 +136,12 @@ onload = function(){
     var value1 = apellidos.value;
     var days1= 360;
     setCookie(name1,value1,days1);
-      window.onload = function () {
-        obtenerClavesLocal();
-      }
-    function obtenerClavesLocal() {
-       if (window.localStorage != null) {
 
-          var correo = localStorage.getItem("email");
-          var correo_object = document.getElementById("email");
-          correo_object.value = email;
-       }
-    }
-    function guardarClavesLocal() {
-       if (window.localStorage != null) {
-          //Guardar claves con los valores de los inputs
-          var correo_object = document.getElementById("email");
-          var correo = correo_object.value;
-          localStorage.setItem("email",correo);
-       }
-     }
+  correo = document.getElementsByTagName("input")[2].value;
+ localStorage.setItem("Email",correo);
+
+ dni = document.getElementsByTagName("input")[4].value;
+ sessionStorage.setItem("DNI",dni),
 
     boton =   document.getElementById("enviar");
     boton.value = "Enviando...";
