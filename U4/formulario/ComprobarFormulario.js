@@ -124,7 +124,7 @@ onload = function(){
     boton =   document.getElementById("enviar");
     boton.value = "Enviando...";
       boton.disabled = true;
-      console.log(hola.value);
+    
    errList += "Tu petición se ha enviado correctamente";
      errores.style.color="blue";
    }else{
