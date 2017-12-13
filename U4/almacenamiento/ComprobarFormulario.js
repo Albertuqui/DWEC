@@ -125,6 +125,7 @@ onload = function(){
 
 
     if (ret){
+      //Empieza el tema de almacenamiento
       nombre = document.getElementsByTagName("input")[0];
      var name= "nombre";
      var value = nombre.value;
@@ -142,6 +143,7 @@ onload = function(){
 
  dni = document.getElementsByTagName("input")[4].value;
  sessionStorage.setItem("DNI",dni),
+ //acaba el tema de almacenamiento
 
     boton =   document.getElementById("enviar");
     boton.value = "Enviando...";
