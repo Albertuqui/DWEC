@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AJAX RANDOM</title>
+    <script type="text/javascript">
+      onload = function(){
+        if(window.XMLHttpRequest){
+          var xhr = new XMLHttpRequest();
+        }
+        else if(ActiveXObject("Microsoft.XMLHTTP")){
+          var xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+      }
+
+      var url = "datosServidor.txt";
+      xhr.open("GET",url, true);
+      xhr.onreadystatechange = muestraResultado;
+      xhr.send();
+
+    </script>
+  </head>
+  <body>
+<h1 id="titularandom"></h1>
+  </body>
+</html>
