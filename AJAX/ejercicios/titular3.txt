@@ -1,1 +1,15 @@
-﻿Nescafé reconoce que ya sólo vende sus productos para poder pagar a los ganadores del sueldo para toda la vida
+﻿<style>
+p{
+text-align: justify;
+margin:10px;
+}
+</style>
+<center>
+
+<h2>Nescafé reconoce que ya sólo vende sus productos para poder pagar a los ganadores del sueldo para toda la vida</h2> 
+
+<img src="articulo3.png" width="200px" />
+
+</center>
+
+<p>Después de más de 30 años con su famosa promoción, Nescafé ha reconocido esta semana que se encuentra en una situación desesperada y que ya sólo vende sus productos para poder pagar a los ganadores del sueldo para toda la vida. “Desde el año 2016 no tenemos beneficios, todo lo que ganamos es para los agraciados de la promoción”, se sinceran desde la marca, que ya ha tenido que dejar de pagar a sus propios trabajadores, muchos de los cuales esperan poder ganar la promoción para ser remunerados.</p>

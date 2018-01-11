@@ -30,6 +30,17 @@
         if(xhr.readyState == 4 && xhr.status == 200){
           titularandom.innerHTML = xhr.responseText;
           titularandom.style.textAlign= "center";
+          estados.innerHTML += "<h1>Estado<h1>";
+          estados.innerHTML += xhr.readyState;
+          estados.style.margin +="10px";
+          cabecera.innerHTML += "<h1>Cabecera<h1>";
+          cabecera.innerHTML += xhr.getAllResponseHeaders();
+          cabecera.style.margin +="10px";
+          codigos.innerHTML += "<h1>Código<h1>";
+          codigos.innerHTML += xhr.status;
+          codigos.style.margin +="10px";
+          console.log(xhr.readyState);
+          console.log(xhr.status);
         }
         else if(xhr.readyState == 4 && xhr.status != 200){
           titularandom.innerHTML = "ERROR: Los ficheros no han sido encontrados";
@@ -43,6 +54,13 @@
   </head>
   <body>
 <div id="titularandom"></div>
+<div id="estados"></div>
+<div id="cabecera"></div>
+<div id="codigos"></div>
+
+</div>
+
+</div>
 
 </div>
 

@@ -1,1 +1,13 @@
-﻿Un padre lleva cinco años con la linterna del móvil activada
+﻿<style>
+p{
+font-size:12px;
+}
+</style>
+<center>
+
+<h2>Un padre lleva cinco años con la linterna del móvil activada</h2> 
+
+<img src="articulo1.jpg" width="400px" />
+
+<p>HASTA AHORA CREÍA QUE ERA LO NORMAL Y QUE ERAN "LAS LUCES DE POSICIÓN DEL MÓVIL", COMO LAS DEL COCHE</p>
+</center>
