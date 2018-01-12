@@ -1,0 +1,18 @@
+﻿<style>
+p{
+text-align: justify;
+margin: 10px;
+}
+</style>
+
+<center>
+
+<h2>Las madres de todo el país exigen la devolución de los “tuppers” secuestrados</h2> 
+
+<img src="articulo4.jpg" width="300px" />
+
+</center>
+
+<p>Tras muchos años cediendo por el bien de la concordia familiar, millones de madres de toda España han decidido decir basta y han exigido la devolución inmediata de todos los “tuppers” secuestrados. “Para qué necesitan tantas fiambreras vacías, lo mínimo es retornarlas, llevamos tiempo pidiéndolo por las buenas”, reclaman. <br /> <br />
+</p>
+
