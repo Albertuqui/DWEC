@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+  input {
+
+  	border:2px solid rgba(255,255,255,.5);
+  	font-size:1.75em;
+  	padding:.25em .5em .3125em;
+  	color:rgba(255,255,255,.5);
+  	border-radius:.25em;
+  	background:transparent;
+  	transition:all .100s;
+
+  	&:focus{
+  		outline:none;
+  		color:rgba(255,255,255,.75);
+  		border-color:rgba(255,255,255,.75);
+  	}
+
+  	&.keyup {
+  		color:white;
+  		border-color:white;
+  		text-shadow:0 0 .125em white;
+  		box-shadow:0 0 .25em white,inset 0 0 .25em white;
+  	}
+  }
+
+span {
+  font-size:1.75em;
+  		color:rgba(255,255,255,.75);
+}
+
+  input {
+  	font-family: "Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;
+  }
+
+
+
+  ::-webkit-input-placeholder {
+  	color:$placeholder-color;
+  	text-shadow:0 0 .125em transparent;
+  	transition:all .25s;
+  }
+  input:focus::-webkit-input-placeholder {
+  	opacity:.5;
+  }
+
+  ::-moz-placeholder {
+  	color:$placeholder-color;
+  	text-shadow:0 0 .125em transparent;
+  	transition:all .25s;
+  }
+  input:focus::-moz-placeholder {
+  	opacity:.5;
+  }
+
+  :-ms-input-placeholder {
+  	color:$placeholder-color;
+  	text-shadow:0 0 .125em transparent;
+  	transition:all .25s;
+  }
+  input:focus:-ms-input-placeholder {
+  	opacity:.5;
+  }
+
+  html,body {
+  	height:100%;
+  	overflow:hidden;
+  }
+
+  html {
+  	background:#333;
+  	background-size:cover;
+  }
+
+  body {
+  	box-shadow:inset 0 0 5em #000;
+  }
+
+  input {
+  	position:absolute;
+  	box-sizing:border-box;
+  top:3em;
+  	left:50%;
+  	width:11em;
+  	margin-left:-5.5em;
+    outline: none;
+
+  }
+
+p{
+  position: absolute;
+box-sizing: border-box;
+top:8em;
+left: 50%;
+width: 50em;
+margin-left: -5.5em;
+display: none;
+}
+
+
+
+
+    </style>
+    <meta charset="utf-8">
+    <title>Ejemplo Buscador Provincias</title>
+    <script type="text/javascript">
+      var xhr = new XMLHttpRequest();
+      onload = function(){
+        buscador.onkeyup = function(){
+            parrafo.style.display="block";
+          var str = buscador.value;
+          console.log(str);
+          xhr.open("GET","U6Ej3Sugerencias.php?q=" + str, true);
+          xhr.onreadystatechange = function(){
+            if (xhr.readyState == 4 && xhr.status == 200){
+              resultado.innerHTML = xhr.responseText ;
+            }
+          }
+          xhr.send();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form method="GET" id="formulario">
+    <div id="container">
+      <p id="parrafo"><span id="resultado" ></span></p>
+<input type="text" id="buscador" placeholder="Escriba el nombre..." >
+    </input>
+</form>
+</div>
+  </body>
+</html>

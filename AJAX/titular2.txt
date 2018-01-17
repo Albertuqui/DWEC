@@ -1,0 +1,14 @@
+﻿<style>
+p{
+text-align: justify;
+margin:10px;
+}
+</style>
+<center>
+
+<h2>Kinder venderá los huevos vacíos porque ya es la única manera de sorprender a los niños</h2> 
+
+<img src="articulo2.jpg" width="400px" />
+
+<p>Después de muchos años comiendo huevos Kinder, los niños han dejado de sorprenderse al encontrar juguetes escondidos en su interior. Por ello, a partir de ahora, la línea infantil de la marca Ferrero venderá los huevos vacíos sabiendo que esa es ya la única manera de provocar su sorpresa. “Una sorpresa desagradable también es una sorpresa”, aclaran desde la dirección de marketing.</p>
+</center>
