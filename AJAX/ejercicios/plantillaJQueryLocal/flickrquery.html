@@ -9,7 +9,7 @@
 		$("button").click(function(){
 					$("img").remove();
 				var imagen = $(document.createElement("img")).attr("src","carga.gif").width(50);
-				$("#imagenes").append(imagen);
+				$("#carga").append(imagen);
 			var valor =	$("#selector").val();
 			var url ="https://api.flickr.com/services/feeds/photos_public.gne?tags=";
 			url += valor + "&format=json&jsoncallback=?";
@@ -34,6 +34,9 @@
 </head>
 <body>
 	<h1>Mi Flickr</h1>
+	<div id="carga">
+
+	</div>
 	<button>Dibujar</button>
 	<select id="selector">
 		<option value="bulldogfrench">Bulldog Francés</option>
