@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      *{
+        background-color: #DCDCDC;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>Petición Ajax con JQuery usando LOAD</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+      numeroart = Math.floor(Math.random()*4+1);
+          $("#titularandom").load("titular"+numeroart+".txt");
+    	});
+    </script>
+  </head>
+  <body>
+    <div id="titularandom"></div>
+  </body>
+</html>

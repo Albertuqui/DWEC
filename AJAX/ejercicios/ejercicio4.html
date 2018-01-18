@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo de envío de un formulario de login para validación</title>
+    <script type="text/javascript">
+      if (XMLHttpRequest){
+        var xhr = new XMLHttpRequest();
+      }else if(ActiveXObject("Microsoft.XMLHTTP")){
+        var xhr = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      onload = function(){
+        document.forms[0].onsubmit = function(e){
+            e.preventDefault(); //nunca enviaré el formulario porque me traeré los datos con Ajax en lugar de enviarlos con submit
+            var url = "U6Ej4LoginJSON.php";
+            xhr.open("POST",url,true);
+            xhr.onreadystatechange = function(){
+              if(xhr.readyState == 4 && xhr.status == 200){
+                var respuesta = xhr.responseText;
+                console.log(respuesta);
+                document.getElementById("resLogin").innerHTML = respuesta;
+                var x = JSON.parse(respuesta);
+                console.log(x);
+                if(x.res){
+
+                  localStorage.setItem("token",x.token);
+                  document.forms[0].action="homelogado.html";
+                      document.forms[0].submit();
+                }else{
+                  alert("ERROR");
+                }
+              } 
+
+
+            }
+            //devolvemos una strLogin = "usuario=valor_us&pass=valor_pass"
+            function obtenDatosLogin(){
+              var us = document.getElementById("usuario").value;
+              var password = document.getElementById("password").value;
+              var strLogin = "usuario=" + encodeURIComponent(us) + "&password=" + encodeURIComponent(password);
+              console.log(strLogin);
+              return strLogin;
+            }
+
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+
+            var datosLogin = obtenDatosLogin();
+            xhr.send(datosLogin);
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Ejemplo envío datos Login y obtengo respuesta mediante Ajax</h1>
+    <h2>Formato envío: url</h2>
+    <form action="#" method="post">
+      <div>Usuario: <input type="text" id="usuario" name="usuario" placeholder="Introduce tu usuario..." maxlength="40"></input></div>
+      <div>Contraseña: <input type="password" id="password" name="password"></input></div>
+      <div id="resLogin"></div>
+      <input type="submit" name="boton" id="enviar" value="Enviar"></input>
+    </form>
+  </body>
+</html>
