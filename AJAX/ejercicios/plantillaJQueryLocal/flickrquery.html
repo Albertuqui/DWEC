@@ -7,6 +7,9 @@
 	<script type="text/javascript">
 	$(document).ready(function() {
 		$("button").click(function(){
+					$("img").remove();
+				var imagen = $(document.createElement("img")).attr("src","carga.gif").width(50);
+				$("#imagenes").append(imagen);
 			var valor =	$("#selector").val();
 			var url ="https://api.flickr.com/services/feeds/photos_public.gne?tags=";
 			url += valor + "&format=json&jsoncallback=?";
@@ -16,30 +19,30 @@
 					var arrayfotos = data.items;
 					$.each(arrayfotos ,function(i, item){
 						var imagen = $(document.createElement("img"));
-							$(imagen).attr("src","carga.gif");
-						$(imagen).attr("src",item.media.m);
-						$(imagen).attr("width","250px");
-						$(imagen).attr("height","250px");
+						$(imagen).attr("src",item.media.m).attr("width","250px").attr("height","250px");
 						$("#imagenes").append(imagen);
 						return i<9;
-				});
-} else{
-	alert("No va")
-}
+					});
+				} else{
+					alert("No va");
+				}
 
-				});
 			});
 		});
+	});
 </script>
 </head>
 <body>
 	<h1>Mi Flickr</h1>
 	<button>Dibujar</button>
 	<select id="selector">
-		<option value="landscapes">Paisajes</option>
-		<option value="puppy">Cachorros</option>
-		<option value="dog">Perritos</option>
-		<option value="iguana">Iguana</option>
+		<option value="bulldogfrench">Bulldog Francés</option>
+		<option value="bulldogenglish">Bulldog Inglés</option>
+		<option value="bulldogamerican">Bulldog Americano</option>
+		<option value="beagledog">Beagle</option>
+		<option value="pug">Pug</option>
+		<option value="bostonTerrier">Boston Terrier</option>
+		<option value="caniche">Caniche</option>
 	</select>
 	<div id="imagenes">
 
